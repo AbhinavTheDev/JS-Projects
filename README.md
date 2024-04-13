@@ -1,2 +1,2 @@
 # JS-Projects
-Javascript Projects
+Chai Aur Code Javascript Course Projects
