@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 1em;
+}
+.title{
+  display: flex;
+  /* justify-content: center; */
+  align-items:center;
+  gap: 0.5em;
+}
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+.ver {
+  background-color: rgba(88, 176, 253, 0.724);
+  padding: 0em 0.5em;
+  border-radius: 1em;
+  font-weight: bolder;
+}
+.hidden {
+  display: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.ProContainer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(183, 238, 255, 0.532);
+    border: 0.2em solid rgba(15, 168, 215, 0.532);
+    padding: 0.5em 4em;
+    border-radius: 1em;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+      /* Add this to your CSS file to style the toggle switch */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      /* Add this to your CSS file to style the dark mode */
+      .dark {
+        background-color: #000000;
+        color: #fff;
+      }
+      .dark a {
+        color: #fff;
+      }
+      .dark .ProContainer {
+        background-color: rgb(52, 52, 52);
+        border-color: #fff;
+      }
+
+.moon-svg, .sun-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+  border-width: 0.2em;
+  border-style: solid;
+  border-radius: 0.5em;
+  padding: 0.3em 0.3em 0em 0.3em;
+
+}
