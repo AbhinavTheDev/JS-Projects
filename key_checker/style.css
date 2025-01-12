@@ -1,0 +1,136 @@
+body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+#display {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 300px;
+    text-align: center;
+}
+
+.keyboard {
+    background: #2a2a2a;
+    padding: 25px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto 120px 160px;
+    gap: 15px;
+}
+
+.main-keys {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.arrow-keys {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrow-keys .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.arrow-keys .key[data-key="ArrowUp"] {
+    grid-column: 2;
+}
+
+.arrow-keys .row:last-child {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.numpad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.numpad .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.key {
+    background: #3a3a3a;
+    color: white;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 45px;
+    height: 45px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.key:hover {
+    background: #4a4a4a;
+}
+
+.key.pressed {
+    background: #ff5733;
+    transform: scale(0.95);
+}
+
+.space {
+    width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #4a4a4a;
+    padding: 10px;
+}
+
+.space-h {
+    width: 20px;
+}
+
+.tab { width: 70px; }
+.caps { width: 80px; }
+.enter { width: 90px; }
+.shift { width: 100px; }
+.ctrl, .alt { width: 60px; }
+.win { width: 50px; }
+.backspace { width: 95px; }
+
+/* Special styling for function keys */
+.row:first-child .key {
+    font-size: 12px;
+    height: 35px;
+    margin-bottom: 15px;
+}

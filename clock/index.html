@@ -12,10 +12,13 @@
       }
       .center {
         display: flex;
-        height: 100vh;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+      }
+      #banner {
+        font-size: 30px;
+        margin-bottom: 20px;
       }
       #clock {
         font-size: 40px;
@@ -24,14 +27,136 @@
         margin-top: 10px;
         border-radius: 10px;
       }
+      .toggle-container {
+        text-align: center;
+        padding: 20px;
+      }
+
+  .toggle-btn {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+  }
+
+  .toggle-btn.active {
+    background: orange;
+  }
+
+  #clock, #analog-clock {
+    display: none;
+  }
+
+  #clock.active, #analog-clock.active {
+    display: block;
+  }
+
+  #analog-clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #fff;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    background: #000;
+    border-radius: 4px;
+  }
+
+  .hour-hand {
+    width: 4px;
+    height: 24%;
+    background: #333;
+  }
+
+  .minute-hand {
+    width: 3px;
+    height: 35%;
+    background: #666;
+  }
+
+  .second-hand {
+    width: 2px;
+    height: 40%;
+    background: red;
+  }
+
+  .center-point {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+  }
+
+  .number {
+    color: #333;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+    /* padding: 18px; */
+  }
+
+  .number1 { --rotation: 30deg; }
+  .number2 { --rotation: 60deg; }
+  .number3 { --rotation: 90deg; }
+  .number4 { --rotation: 120deg; }
+  .number5 { --rotation: 150deg; }
+  .number6 { --rotation: 180deg; }
+  .number7 { --rotation: 210deg; }
+  .number8 { --rotation: 240deg; }
+  .number9 { --rotation: 270deg; }
+  .number10 { --rotation: 300deg; }
+  .number11 { --rotation: 330deg; }
+  .number12 { --rotation: 360deg; }
     </style>
   </head>
   <body>
     <nav>
+      <div class="toggle-container">
+        <button class="toggle-btn active" data-clock="digital">Digital</button>
+        <button class="toggle-btn" data-clock="analog">Analog</button>
+      </div>
     </nav>
     <div class="center">
       <div id="banner"><span>Your local time</span></div>
-      <div id="clock"></div>
+      <div id="clock" class="active"></div>
+      <div id="analog-clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-point"></div>
+        <div class="numbers">
+          <span class="number number1">1</span>
+          <span class="number number2">2</span>
+          <span class="number number3">3</span>
+          <span class="number number4">4</span>
+          <span class="number number5">5</span>
+          <span class="number number6">6</span>
+          <span class="number number7">7</span>
+          <span class="number number8">8</span>
+          <span class="number number9">9</span>
+          <span class="number number10">10</span>
+          <span class="number number11">11</span>
+          <span class="number number12">12</span>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>
