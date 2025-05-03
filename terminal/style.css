@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a; /* Dark background */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 2rem);
+    padding: 1rem;
+}
+.content{
+    width: 100%;
+    max-width: 42rem;
+}
+.wrapper {
+    background-color: #1e293b;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85); /* Adjusted shadow */
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #334155; /* Darker header */
+    padding: 1rem;
+}
+.dots {
+    display: flex;
+    align-items: center;
+}
+.red{
+    background-color: #ef4444;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.yellow{
+    background-color: #eab308;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.green{
+    background-color: #22c55e;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.title{
+    color: aliceblue;
+}
+.btns {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+}
+
+.badge {
+    background-color: #475569;
+    color: #cbd5e1;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 0.375rem;
+}
+
+.cpybtn {
+    padding: 0.5rem;
+}
+
+.terminal-output {
+    color: #22c55e;
+    overflow-y: auto;
+    padding: 0.5rem;
+    max-height: 300px; /* Set a max height to enable scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #475569 #1e293b; /* For Firefox */
+}
+
+.terminal-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+    background-color: #475569;
+    border-radius: 20px;
+    border: 2px solid #1e293b;
+}
+
+.terminal-text > input {
+    background-color: #1e293b;
+    padding: 0.4rem;
+    border: none;
+    width: calc(100% - 3rem);
+    color: #22c55e;
+    outline: none; /* Remove the highlight/focus outline */
+}
+
+
+
+/* Add text wrapping for terminal content */
+.terminal-text {
+    white-space: pre-wrap; /* This preserves spaces but allows wrapping */
+    word-break: break-word; /* Breaks words at the end of line if needed */
+}
+
+.terminal-cursor {
+  display: inline-block;
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+/* .tooltip-container:hover .tooltip {
+    display: block;
+} */
+
+/* .bg-grid {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSI+PC9yZWN0Pgo8L3N2Zz4=");
+} */
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

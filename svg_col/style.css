@@ -1,0 +1,75 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    width: 300px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo svg {
+    max-width: 100%; 
+    height: auto;
+}
+
+.card-content {
+    padding: 10px 20px;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card-content p {
+    margin-bottom: 10px;
+}
+
+.copy-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+}
+
