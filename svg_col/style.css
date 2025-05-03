@@ -67,9 +67,13 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    position: fixed; 
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    /* position: fixed;  */
     bottom: 0;
     width: 100%; 
 }
 
+.fil2 {
+    fill: black;
+}

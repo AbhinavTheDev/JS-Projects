@@ -44,7 +44,7 @@ const data = [
     img: "./assets/number_game.png",
   },
   { name: "terminal", link: "./terminal/index.html" },
-  { name: "svg-col", link: "./svg_col/index.html" },
+  { name: "SVGs", link: "./svg_col/index.html" },
 ];
 
 

@@ -29,6 +29,7 @@ body {
   color: white;
 }
 header {
+  font-family: "Roboto", sans-serif;
   height: 60px;
   width: 90vw;
   margin: 0 auto;
@@ -63,6 +64,7 @@ header .img-container img {
   border-radius: 50%;
   object-fit: cover;
 }
+
 .dark header {
   /* background-color: var(--dark-02); Match dark theme */
   backdrop-filter: blur(10px) brightness(0.5);
@@ -130,7 +132,6 @@ section {
   }
 }
 
-
 .content {
   position: absolute;
   inset: 0;
@@ -156,7 +157,7 @@ section {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   /* Improve readability with subtle shadow */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   /* Add smooth transition for theme change */
   transition: all 0.3s ease-out;
   /* Fix text cutoff issues */
@@ -167,7 +168,7 @@ section {
 
 .dark .h1--scalingSize {
   /* Create yellow-white gradient as requested */
-  background: linear-gradient(135deg, #FFD700 0%, #FFFAF0 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #fffaf0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,7 +205,7 @@ section {
 
 .dark .h1--scalingSize::before {
   /* Change stroke color to match gradient */
-  -webkit-text-stroke: 1px #FFD700;
+  -webkit-text-stroke: 1px #ffd700;
   /* Add subtle gold glow */
   text-shadow: 0 0 2px rgba(255, 215, 0, 0.4);
   /* Adjust filter for better appearance in dark mode */
@@ -376,7 +377,6 @@ section .subheading {
 /* basic .cardSection elements styling */
 .cardSection h2 {
   margin: 0 0 18px 0;
-  /* font-family: "Bebas Neue", cursive; */
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--title-color);
